@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h2>Calculator</h2>
+    <div class="mb-3">
+      <label for="number1" class="form-label">Number 1</label>
+      <input type="number" class="form-control" [(ngModel)]="number1" id="number1" />
+    </div>
+    <div class="mb-3">
+      <label for="number2" class="form-label">Number 2</label>
+      <input type="number" class="form-control" [(ngModel)]="number2" id="number2" />
+    </div>
+    <div class="mb-3">
+      <label for="operation" class="form-label">Operation</label>
+      <select class="form-select" [(ngModel)]="operation" id="operation">
+        <option value="">Select</option>
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" (click)="calculate()" *appHasRole="role">Calculate</button>
+    <app-calculator-result [result]="result"></app-calculator-result>
+  </div>
