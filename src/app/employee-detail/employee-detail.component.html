@@ -1,0 +1,28 @@
+<div class="container mt-4" *ngIf="employee">
+    <h2>Employee Details</h2>
+    <dl class="row">
+      <dt class="col-sm-3">Name</dt>
+      <dd class="col-sm-9">{{ employee.name }}</dd>
+  
+      <dt class="col-sm-3">Department</dt>
+      <dd class="col-sm-9">{{ employee.department }}</dd>
+  
+      <dt class="col-sm-3">Status</dt>
+      <dd class="col-sm-9">{{ employee.status }}</dd>
+  
+      <dt class="col-sm-3">Address</dt>
+      <dd class="col-sm-9">{{ employee.address }}</dd>
+  
+      <dt class="col-sm-3">Phone</dt>
+      <dd class="col-sm-9">{{ employee.phone }}</dd>
+  
+      <dt class="col-sm-3">Email</dt>
+      <dd class="col-sm-9">{{ employee.email }}</dd>
+  
+      <dt class="col-sm-3">Position</dt>
+      <dd class="col-sm-9">{{ employee.position }}</dd>
+  
+      <dt class="col-sm-3">Joining Date</dt>
+      <dd class="col-sm-9">{{ employee.joiningDate | date }}</dd>
+    </dl>
+  </div>

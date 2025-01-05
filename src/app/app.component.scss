@@ -1,0 +1,53 @@
+/* Define Angular colors */
+$primary-color: #dd0031; /* Angular primary red */
+$background-color: #f8f9fa; /* Subtle light gray background */
+$text-color: #555555; /* Dark gray for default text */
+$hover-color: #007bff; /* Blue for hover effect */
+$active-color: $primary-color; /* Angular red for active links */
+
+.navbar {
+  background-color: $background-color; /* Subtle light gray background */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $text-color;
+
+    img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $text-color; /* Keep text color consistent on hover */
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+
+    .nav-link {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $text-color;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color; /* Subtle blue on hover */
+      }
+
+      &.active {
+        color: $active-color; /* Red color for active link */
+        font-weight: bold;
+      }
+    }
+  }
+}
