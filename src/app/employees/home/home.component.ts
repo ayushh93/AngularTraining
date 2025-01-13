@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { EmployeeService } from '../Services/employee.service';
 import { Router } from '@angular/router';
-import { Employee } from '../Models/employee.model';
 import { CommonModule } from '@angular/common';
+import { EmployeeService } from '../../Services/employee.service';
+import { Employee } from '../../Models/employee.model';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
-  standalone: true,
+  standalone: false,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -24,6 +23,6 @@ export class HomeComponent implements OnInit {
 
   // Method to navigate to the detail page
   viewDetails(id: number): void {
-    this.router.navigate(['/employee', id]);
+    this.router.navigate(['/employees', id]);
   }
 }

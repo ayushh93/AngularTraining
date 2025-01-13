@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../Models/employee.model';
 import { ActivatedRoute } from '@angular/router';
-import { EmployeeService } from '../Services/employee.service';
 import { CommonModule } from '@angular/common';
+import { EmployeeService } from '../../Services/employee.service';
+import { Employee } from '../../Models/employee.model';
 
 @Component({
   selector: 'app-employee-detail',
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './employee-detail.component.html',
   styleUrl: './employee-detail.component.scss'
 })
