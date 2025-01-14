@@ -17,7 +17,11 @@ export class TemplateFormComponent {
     district: ''
   };
 
-  submitForm() {
-    console.log('Form Submitted:', this.formData);
-  }
+  submitForm(form: any) {
+    if (form.valid) {
+      console.log('Form submitted successfully:', this.formData);
+    } else {
+      console.log('Form is invalid');
+    }
+}
 }
