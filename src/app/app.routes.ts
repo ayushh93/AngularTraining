@@ -9,4 +9,7 @@ export const routes: Routes = [
         loadComponent: () => import('./calculator-input/calculator-input.component').then(m => m.CalculatorInputComponent)
     },
     { path: 'employees', loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule) },
+    { 
+        path: 'template-form',
+        loadComponent:  () => import('./template-form/template-form.component').then(m => m.TemplateFormComponent)},
 ];
